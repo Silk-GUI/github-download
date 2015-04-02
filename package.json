@@ -1,12 +1,12 @@
 {
-  "name": "github-download",
-  "version": "0.0.1",
+  "name": "github-downloader",
+  "version": "0.0.2",
   "description": "Downloads and extracts a github repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/download.js"
   },
-  "author": "",
+  "author": "zodern",
   "license": "MIT",
   "dependencies": {
   	"request": "*",

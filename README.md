@@ -16,13 +16,15 @@ githubDownload.setUserAgent('userAgent');
 
 Download Repository
 ```
-githubDownload(githubUser, githubRepo, outputPath, callback);
+githubDownload(options, callback);
 ```
 
-`githubUser` String.  Username of owner of repository
+### Options
 
-`githubRepo` String.  Name of repository to download.
+`username` String.  Username of owner of repository
 
-`outputPath` String.  Path to extract the repository to.  We do not create a containing folder.
+`repo` String.  Name of repository to download.
 
-`callback` Function.  Called after the repository is downloaded and extracted.
+`output` String.  Path to extract the repository to.  We do not create a containing folder.
+
+`version` String. Currently only "latest" is supported. Downloads latest release.
