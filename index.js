@@ -18,7 +18,6 @@ var log = function () {};
  * @type {string}
  */
 var userAgent = "";
-var count = 0;
 /**
  * Downloads a github repository and extracts
  * @param {object} options
@@ -27,8 +26,7 @@ var count = 0;
  */
 var GithubDownloader = function (options, next) {
   var self = this;
-  count = count + 1;
-  self.id = count;
+  self.id = new Date().getTime() + '-' + Math.floor(Math.random()*10000000000000000);
   if(!(this instanceof GithubDownloader)){
     log('creating instance');
     return new GithubDownloader(options, next);
